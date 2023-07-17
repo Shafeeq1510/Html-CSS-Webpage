@@ -6,20 +6,107 @@
     <title>Document</title>
 </head>
 <body>
+    <div style="margin-left: 40%;">
+
+   
+    <form >
+        First name: <input type = "text" name = "first_name" />
+        <br>
+        Last name: <input type = "text" name = "last_name" />
+     </form>
     <form>
-        firstname: <br>
-        <input type="text" name="fname" placeholder="firstname here"><br> last name <br>
-        <input type="text" name="lname" placeholder="lastname here" ><br> 
+        Enter date of birth
+        <input type = 'date' name="bday" max="2023-12-31">
+       
+        <br>
+        Enter State
+        <select name="State" id="State" >
+            <option value="Kerala">Kerala</option>
+            <option value="TamilNadu" selected>TamilNadu</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Andra Pradesh">Andra Pradesh</option>
+          </select>
+          <br>
+      Gender
+          <input type="radio" value="Male">
+            <label for="html">Male</label>
+            <input type="radio"value="Female">
+            <label for="css">Female</label><br>
+            Skills <br> 
+            <input type="checkbox"  value="Html">
+            <label for="Html"> HTML</label><br>
+            <input type="checkbox"  value="Css">
+            <label for="Css"> CSS</label><br>
+            <input type="checkbox" value="JavaScript">
+            <label for="JavaScript">JavaScript</label><br>
+
+            <div>
+                <style>
+                    #dropdown-checkbox{
+                        width: 15px;
+                        height:20px
+                    
+                    }
+                    .checkbox-dropdown {
+                      position: relative;
+                      display: inline-block;
+                    }
+                  
+                    .checkbox-dropdown input[type="checkbox"] {
+                      display: none;
+                    }
+                  
+                    .checkbox-dropdown label {
+                      display: block;
+                      padding: 8px 12px;
+                      border: 1px solid #d4d0d0;
+                      background-color: #c1bcbc;
+                      cursor: pointer;
+                    }
+                  
+                    .checkbox-dropdown input[type="checkbox"]:checked + label {
+                      background-color: #f1f1f1;
+                    }
+                  
+                    .checkbox-dropdown .dropdown-content {
+                      position: absolute;
+                      z-index: 1;
+                      top: 100%;
+                      left: 0;
+                      right: 0;
+                      display: none;
+                      background-color: #fff;
+                      border: 1px solid #ccc;
+                    }
+                  
+                    .checkbox-dropdown input[type="checkbox"]:checked + label + .dropdown-content {
+                      display: block;
+                    }
+                  </style>
+                  
+                  <div class="checkbox-dropdown">
+                    <input type="checkbox" id="dropdown-checkbox">
+                    <label for="dropdown-checkbox">Others</label>
+                    <div class="dropdown-content">
+                      <input type="checkbox" id="option1">
+                      <label for="option1">Option 1</label>
+                      <input type="checkbox" id="option2">
+                      <label for="option2">Option 2</label>
+                      <input type="checkbox" id="option3">
+                      <label for="option3">Option 3</label>
+                    </div>
+                  </div>
+              
+            </div>
+            
+               
+              </select>
+           
     </form>
-    <form>
-        Enter a date before 1980-01-01:
-        <input type = 'date' name="bday" max="1979-12-31">
-        Enter a date after 2000-01-01:
-        <input type = "date" name="bday" min="2000-01-02">
-        Quantity(between 1 and 5):
-        <input type="number" name="quantity" min="1" max="5">
-        <input type="submit">
-    </form>
+    <input type="submit">
+    </div>
+    </body>
+    
     
 </body>
 </html>
